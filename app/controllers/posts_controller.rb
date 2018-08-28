@@ -10,6 +10,7 @@ class PostsController < ApplicationController
 
   def create 
     @post = Post.new(post_params)
+    @post.user_id = current_user.id
 
     respond_to do |format|
       if @post.save
@@ -17,7 +18,7 @@ class PostsController < ApplicationController
           format.json { render :index, status: :created, location: posts_path }
           format.js
       else
-          format.html { render :new }
+          format.html { render :new, notice: 'Post failed, yo!' }
           format.json { render json: @post.errors, status: :unprocessable_entity }
           format.js
       end
