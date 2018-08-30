@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index 
-    @post = Post.all
+    @posts = Post.all
   end
 
   def new 
@@ -10,6 +10,8 @@ class PostsController < ApplicationController
 
   def create 
     @post = Post.new(post_params)
+    @post.user_id = current_user.id
+    @post.author = current_user.email
 
     respond_to do |format|
       if @post.save
@@ -17,7 +19,7 @@ class PostsController < ApplicationController
           format.json { render :index, status: :created, location: posts_path }
           format.js
       else
-          format.html { render :new }
+          format.html { render :new, notice: 'Post failed, yo!' }
           format.json { render json: @post.errors, status: :unprocessable_entity }
           format.js
       end
@@ -43,8 +45,8 @@ class PostsController < ApplicationController
 
 private
 
-  def post_params
-    params.require(:post).permit(:title, :body)
-  end
+    def post_params
+      params.require(:post).permit(:title, :body, :author, :user_id)
+    end
 
 end
