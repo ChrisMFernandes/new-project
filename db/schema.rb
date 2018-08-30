@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2018_08_27_194129) do
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "body"
+    t.string "author"
     t.integer "user_id"
   end
 

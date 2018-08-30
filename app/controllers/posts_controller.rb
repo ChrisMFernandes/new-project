@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index 
-    @post = Post.all
+    @posts = Post.all
   end
 
   def new 
@@ -11,6 +11,7 @@ class PostsController < ApplicationController
   def create 
     @post = Post.new(post_params)
     @post.user_id = current_user.id
+    @post.author = current_user.email
 
     respond_to do |format|
       if @post.save
@@ -44,8 +45,8 @@ class PostsController < ApplicationController
 
 private
 
-  def post_params
-    params.require(:post).permit(:title, :body)
-  end
+    def post_params
+      params.require(:post).permit(:title, :body, :author, :user_id)
+    end
 
 end
