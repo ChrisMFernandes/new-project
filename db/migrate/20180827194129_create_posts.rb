@@ -4,7 +4,7 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.string :title
       t.text :body
       t.string :author
-      t.integer :user_id
+      t.references :user, index: true, foreign_key: true
     end
   end
 end
