@@ -1,0 +1,18 @@
+<div class="card-group">
+  <% @posts.each do |post| %>
+    <div class="card">
+      <div class="card-header">
+        <%= post.author %>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">
+          <%= post.title %>
+        </h5>
+        <p class="card-text">
+          <%= post.body %>
+        </p>
+        <%= link_to 'Post', post_path(post), class: "btn btn-primary"%>
+      </div>
+    </div>
+  <% end %>
+</div>
