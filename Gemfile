@@ -12,6 +12,9 @@ gem 'bootstrap', '~> 4.1.3'
 #JQuery for rails, Bootstrap dependency
 gem 'jquery-rails'
 
+#Simple form for easier forms
+gem 'simple_form'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use sqlite3 as the database for Active Record
