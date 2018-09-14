@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container-fluid" id="post-container">
   <% @posts.each do |post| %>
     <div class="row justify-content-center">
-      <div class="col-sm-8 text-center">
+      <div class="col-sm-6 text-center">
         <div class="card">
           <div class="card-header">
             <%= post.author %>
@@ -17,6 +17,6 @@
           </div>
         </div>
       </div>
-    </div>
+    </div><br>
   <% end %>
 </div>

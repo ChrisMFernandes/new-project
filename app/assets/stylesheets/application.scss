@@ -13,21 +13,17 @@
  */
 @import "bootstrap";
 @import "home";
+@import "posts";
 
 body{
   overflow-x: hidden;
 }
 
-footer{
-  height: 100px;
+.navbar{
   background-color: #191919;
 }
 
-.notice{
-  z-index: 1;
-  background-color: green;
-}
-
-.navbar{
+#main-footer{
+  height: 100px;
   background-color: #191919;
 }

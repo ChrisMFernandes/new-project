@@ -37,7 +37,7 @@
     </nav>
     
     <% if notice %>
-      <p class="notice"><%= notice %></p>
+      <div class="alert alert-primary" role="alert"><%= notice %></div>
     <% end %>
     <% if alert %>
       <p class="alert"><%= alert %></p>
@@ -45,7 +45,7 @@
     
     <%= yield %>
 
-    <footer class="container-fluid fixed-bottom">
+    <footer class="container-fluid fixed-bottom" id="main-footer">
       <p>Placeholder for footer</p>
     </footer>
   </body>
