@@ -12,28 +12,22 @@
  *
  */
 @import "bootstrap";
+@import "home";
 
 body{
   overflow-x: hidden;
 }
 
-.bgimage {
-  width:100%;
-  height:750px;
-  background: url('mtbHero.jpg'); //Photo by Eerik Sandstrom on Unsplash
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-.bgimage h5 {
-  color: white;
-  text-shadow: 2px 2px #333;
-  text-align: center;
+footer{
+  height: 100px;
+  background-color: #191919;
 }
 
 .notice{
-  position: absolute;
+  z-index: 1;
   background-color: green;
+}
+
+.navbar{
+  background-color: #191919;
 }
