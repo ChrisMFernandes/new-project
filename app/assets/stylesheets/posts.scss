@@ -2,6 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.post-header{
+  background-color: #000000;
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-wrapper{
+  padding: 10%;
+  background-color: #323232;
+  color: white;
+}
+
+.show-post{
+  background-color: #323232;
+  padding: 10% 5% 10% 5%;
+}
+
 #post-container{
   background-color: #323232;
 }
+
+

@@ -15,7 +15,8 @@
 @import "home";
 @import "posts";
 
-body{
+html, body{
+  height: 100%;
   overflow-x: hidden;
 }
 

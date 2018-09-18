@@ -1,19 +1,23 @@
-<%# TODO: build out the rest of the show page  %>
+<section class="post-header">
+  <h1 id="header-text">Here is what others are saying...</h1>
+</section>
 
-<div class="card text-center">
-  <div class="card-header">
-    <h5>Check out this post written by: <%= @post.author %></h5>
+<section class="show-post">
+  <div class="card text-center" id="post-card">
+    <div class="card-header">
+      <h5>Written by: <%= @post.author %></h5>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">
+        <%= @post.title %>
+      </h5>
+      <p class="card-text">
+        <%= @post.body %>
+      </p>
+      <%= link_to "Back", posts_path, class: "btn btn-primary" %>
+    </div>
+    <div class="card-footer text-muted">
+      <p>Posted on: <%= @post.created_at.strftime("%x") %> at: <%= @post.created_at.strftime("%X") %></p>
+    </div>
   </div>
-  <div class="card-body">
-    <h5 class="card-title">
-      <%= @post.title %>
-    </h5>
-    <p class="card-text">
-      <%= @post.body %>
-    </p>
-    <%# <a href="#" class="btn btn-primary">Go somewhere</a> %>
-  </div>
-  <div class="card-footer text-muted">
-    <p>Posted on: <%= @post.created_at.strftime("%x") %> at: <%= @post.created_at.strftime("%X") %></p>
-  </div>
-</div>
+</section>
