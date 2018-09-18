@@ -1,6 +1,8 @@
-<%# TODO: build out the rest of the show page  %>
+<section class="post-header">
 
-<div class="card text-center">
+</section>
+
+<div class="card text-center" id="post-card">
   <div class="card-header">
     <h5>Check out this post written by: <%= @post.author %></h5>
   </div>
@@ -11,7 +13,7 @@
     <p class="card-text">
       <%= @post.body %>
     </p>
-    <%# <a href="#" class="btn btn-primary">Go somewhere</a> %>
+    <%= link_to "Back", posts_path, class: "btn btn-primary" %>
   </div>
   <div class="card-footer text-muted">
     <p>Posted on: <%= @post.created_at.strftime("%x") %> at: <%= @post.created_at.strftime("%X") %></p>
