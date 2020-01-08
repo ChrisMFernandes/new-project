@@ -7,7 +7,7 @@ ruby '2.4.1'
 gem 'devise'
 
 #Bootstrap for styling
-gem 'bootstrap', '~> 4.3.1'
+gem 'bootstrap', '~> 4.4.1'
 
 #JQuery for rails, Bootstrap dependency
 gem 'jquery-rails'
