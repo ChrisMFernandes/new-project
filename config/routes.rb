@@ -3,10 +3,17 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
     sessions: 'users/sessions'
   }
+
+  get 'comments_posts/new'
+  get 'comments_posts/create'
+  get 'comments_posts/update'
   
   root to: "home#index"
 
   get "about", to: "home#about"
 
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
+  
 end
